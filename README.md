@@ -1,3 +1,3 @@
 # iosmvp
 
-iOS mvp test.
+bygge navigasjon, textklasser, ux-klasser ++

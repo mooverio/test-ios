@@ -1,0 +1,7 @@
+
+9
+armeabi-v7a
+-O3 -g -DNDEBUG
+
+ -I/Users/rolf.valstad/Library/Application\ Support/Fusetools/Packages/UnoCore/0.46.1/prebuilt/Android/include -I/sources/android/support/include -I/Users/rolf.valstad/Library/Application\ Support/Fusetools/Packages/Fuse.Scripting.V8/0.46.1 -I/Users/rolf.valstad/Library/Application\ Support/Fusetools/Packages/Fuse.Text/0.46.1/harfbuzz/include
+/sources/cxx-stl/stlport/stlport

@@ -1,0 +1,4 @@
+$: 1453011903
+BuildCommand: build.sh
+RunCommand: run.sh
+Product: build/Release-iphoneos/test-ios.app/test-ios

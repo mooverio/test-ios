@@ -1,5 +1,7 @@
 <Page ux:Class="LoginPage">
-
+    <JavaScript File="LoginPage.js" />
+    <Text>Logged in!</Text>
+    
 
 
 </Page>

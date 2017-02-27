@@ -1,59 +1,9 @@
 [Uno.Compiler.UxGenerated]
 public partial class MainView: Fuse.App
 {
-    [Uno.Compiler.UxGenerated]
-    public partial class Template: Uno.UX.Template
-    {
-        [Uno.WeakReference] internal readonly MainView __parent;
-        [Uno.WeakReference] internal readonly MainView __parentInstance;
-        public Template(MainView parent, MainView parentInstance): base(null, false)
-        {
-            __parent = parent;
-            __parentInstance = parentInstance;
-        }
-        global::Uno.UX.Property<float> self_Opacity_inst;
-        global::Uno.UX.Property<float4> self_Color_inst;
-        global::Uno.UX.Property<Uno.UX.Size> self_Height_inst;
-        static Template()
-        {
-        }
-        public override object New()
-        {
-            var self = new Fuse.Controls.Rectangle();
-            self_Opacity_inst = new testios_FuseElementsElement_Opacity_Property(self, __selector0);
-            self_Color_inst = new testios_FuseControlsShape_Color_Property(self, __selector1);
-            self_Height_inst = new testios_FuseElementsElement_Height_Property(self, __selector2);
-            var temp = new Fuse.Triggers.AddingAnimation();
-            var temp1 = new Fuse.Animations.Change<float>(self_Opacity_inst);
-            var temp2 = new Fuse.Reactive.DataBinding<float4>(self_Color_inst, "color");
-            var temp3 = new Fuse.Reactive.DataBinding<Uno.UX.Size>(self_Height_inst, "height");
-            self.CornerRadius = float4(5f, 5f, 5f, 5f);
-            self.Margin = float4(5f, 5f, 5f, 5f);
-            self.Name = __selector3;
-            temp.Animators.Add(temp1);
-            temp1.Value = 0f;
-            temp1.Duration = 0.3;
-            self.Children.Add(temp);
-            self.Bindings.Add(temp2);
-            self.Bindings.Add(temp3);
-            return self;
-        }
-        static global::Uno.UX.Selector __selector0 = "Opacity";
-        static global::Uno.UX.Selector __selector1 = "Color";
-        static global::Uno.UX.Selector __selector2 = "Height";
-        static global::Uno.UX.Selector __selector3 = "item";
-    }
-    global::Uno.UX.Property<float4> myRectangle_Color_inst;
-    global::Uno.UX.Property<float4> myRectangle_CornerRadius_inst;
-    global::Uno.UX.Property<object> temp_Items_inst;
-    global::Uno.UX.Property<float> myBlur_Radius_inst;
-    internal Fuse.Controls.Rectangle myRectangle;
-    internal Fuse.Reactive.EventBinding temp_eb0;
-    internal Fuse.Effects.Blur myBlur;
+    [global::Uno.UX.UXGlobalResource("byjente")] public static readonly Fuse.Resources.FileImageSource byjente;
     global::Uno.UX.NameTable __g_nametable;
     static string[] __g_static_nametable = new string[] {
-        "myRectangle",
-        "myBlur"
     };
     static MainView()
     {
@@ -153,6 +103,10 @@ public partial class MainView: Fuse.App
         global::Uno.UX.Resource.SetGlobalKey(Fuse.TranslationModes.ParentSize, "ParentSize");
         global::Uno.UX.Resource.SetGlobalKey(Fuse.TranslationModes.Width, "Width");
         global::Uno.UX.Resource.SetGlobalKey(Fuse.TranslationModes.Height, "Height");
+        global::Uno.UX.Resource.SetGlobalKey(MainView.byjente, "byjente");
+        byjente = new Fuse.Resources.FileImageSource();
+        global::Uno.UX.Resource.SetGlobalKey(byjente, "byjente");
+        byjente.File = new global::Uno.UX.BundleFileSource(import global::Uno.IO.BundleFile("../../../Assets/back.jpeg"));
     }
     [global::Uno.UX.UXConstructor]
     public MainView()
@@ -161,132 +115,108 @@ public partial class MainView: Fuse.App
     }
     void InitializeUX()
     {
-        var temp1 = new Fuse.Reactive.FuseJS.DiagnosticsImplModule();
-        var temp2 = new Fuse.Reactive.FuseJS.Http();
-        var temp3 = new Fuse.Reactive.FuseJS.TimerModule();
-        var temp4 = new Fuse.Drawing.BrushConverter();
-        var temp5 = new Fuse.Triggers.BusyTaskModule();
-        var temp6 = new Fuse.FileSystem.FileSystemModule();
-        var temp7 = new Fuse.Storage.StorageModule();
-        var temp8 = new Fuse.WebSocket.WebSocketClientModule();
-        var temp9 = new Polyfills.Window.WindowModule();
-        var temp10 = new FuseJS.Globals();
-        var temp11 = new FuseJS.Lifecycle();
-        var temp12 = new FuseJS.Environment();
-        var temp13 = new FuseJS.Base64();
-        var temp14 = new FuseJS.Bundle();
-        var temp15 = new FuseJS.FileReaderImpl();
-        var temp16 = new FuseJS.UserEvents();
-        myRectangle = new Fuse.Controls.Rectangle();
-        myRectangle_Color_inst = new testios_FuseControlsShape_Color_Property(myRectangle, __selector0);
-        myRectangle_CornerRadius_inst = new testios_FuseControlsRectangle_CornerRadius_Property(myRectangle, __selector1);
+        var temp = new Fuse.Reactive.FuseJS.DiagnosticsImplModule();
+        var temp1 = new Fuse.Reactive.FuseJS.Http();
+        var temp2 = new Fuse.Reactive.FuseJS.TimerModule();
+        var temp3 = new Fuse.Drawing.BrushConverter();
+        var temp4 = new Fuse.Triggers.BusyTaskModule();
+        var temp5 = new Fuse.FileSystem.FileSystemModule();
+        var temp6 = new Fuse.Storage.StorageModule();
+        var temp7 = new Fuse.WebSocket.WebSocketClientModule();
+        var temp8 = new Polyfills.Window.WindowModule();
+        var temp9 = new FuseJS.Globals();
+        var temp10 = new FuseJS.Lifecycle();
+        var temp11 = new FuseJS.Environment();
+        var temp12 = new FuseJS.Base64();
+        var temp13 = new FuseJS.Bundle();
+        var temp14 = new FuseJS.FileReaderImpl();
+        var temp15 = new FuseJS.UserEvents();
         __g_nametable = new global::Uno.UX.NameTable(null, __g_static_nametable);
-        var temp = new Fuse.Reactive.Each();
-        temp_Items_inst = new testios_FuseReactiveEach_Items_Property(temp, __selector2);
-        myBlur = new Fuse.Effects.Blur();
-        myBlur_Radius_inst = new testios_FuseEffectsBlur_Radius_Property(myBlur, __selector3);
-        var temp17 = new Fuse.Controls.ClientPanel();
-        var temp18 = new Fuse.Controls.PageControl();
-        var temp19 = new PageWithTitle();
-        var temp20 = new Fuse.Controls.Panel();
-        var temp21 = new Fuse.Gestures.WhilePressed();
-        var temp22 = new Fuse.Animations.Rotate();
-        var temp23 = new Fuse.Animations.Scale();
-        var temp24 = new Fuse.Animations.Change<float4>(myRectangle_Color_inst);
-        var temp25 = new Fuse.Animations.Change<float4>(myRectangle_CornerRadius_inst);
-        var temp26 = new PageWithTitle();
-        var temp27 = new Fuse.Reactive.JavaScript(__g_nametable);
-        var temp28 = new Fuse.Controls.Panel();
-        var temp29 = new Fuse.Controls.ScrollView();
-        var temp30 = new Fuse.Controls.Panel();
-        var temp31 = new Fuse.Layouts.ColumnLayout();
-        var item = new Template(this, this);
-        var temp32 = new Fuse.Reactive.DataBinding<object>(temp_Items_inst, "items");
-        temp_eb0 = new Fuse.Reactive.EventBinding("addItem");
-        var temp33 = new PageWithTitle();
-        var temp34 = new Fuse.Controls.Grid();
-        var temp35 = new Fuse.Controls.Image();
-        var temp36 = new Fuse.Controls.Slider();
-        var temp37 = new Fuse.Triggers.ProgressAnimation();
-        var temp38 = new Fuse.Animations.Change<float>(myBlur_Radius_inst);
+        var temp16 = new Fuse.iOS.StatusBarConfig();
+        var temp17 = new Fuse.Controls.DockPanel();
+        var temp18 = new Fuse.Reactive.JavaScript(__g_nametable);
+        var temp19 = new Fuse.Controls.StatusBarBackground();
+        var temp20 = new Fuse.Controls.Rectangle();
+        var temp21 = new Fuse.Controls.Text();
+        var temp22 = new Fuse.Controls.Rectangle();
+        var temp23 = new Fuse.Controls.Text();
+        var temp24 = new Fuse.Controls.Text();
+        var temp25 = new Fuse.Controls.Image();
+        var temp26 = new Fuse.Controls.Rectangle();
+        var temp27 = new Fuse.Controls.Button();
+        var temp28 = new Fuse.Controls.Text();
+        var temp29 = new Fuse.Gestures.WhilePressed();
+        var temp30 = new Fuse.Animations.Scale();
+        var temp31 = new Fuse.Controls.Button();
+        var temp32 = new Fuse.Controls.Text();
+        var temp33 = new Fuse.Gestures.WhilePressed();
+        var temp34 = new Fuse.Animations.Scale();
+        temp16.IsVisible = true;
+        temp16.Style = Fuse.Platform.StatusBarStyle.Light;
         temp17.Children.Add(temp18);
-        temp18.Children.Add(temp19);
-        temp18.Children.Add(temp26);
-        temp18.Children.Add(temp33);
-        temp19.Title = "Basic animation";
-        temp19.Color = float4(0.9960784f, 0.9921569f, 0.9882353f, 1f);
-        temp19.HeaderColor = float4(0.3490196f, 0.372549f, 1f, 1f);
-        temp19.HeaderTextColor = float4(1f, 1f, 1f, 1f);
-        temp19.Instructions = "Tap and hold the rectangle";
-        temp19.Children.Add(temp20);
-        temp20.Children.Add(myRectangle);
-        myRectangle.CornerRadius = float4(0f, 0f, 0f, 0f);
-        myRectangle.Color = float4(0.282353f, 0.5803922f, 0.8980392f, 1f);
-        myRectangle.Width = new Uno.UX.Size(80f, Uno.UX.Unit.Unspecified);
-        myRectangle.Height = new Uno.UX.Size(80f, Uno.UX.Unit.Unspecified);
-        myRectangle.Name = __selector4;
-        myRectangle.Children.Add(temp21);
-        temp21.Animators.Add(temp22);
-        temp21.Animators.Add(temp23);
-        temp21.Animators.Add(temp24);
-        temp21.Animators.Add(temp25);
-        temp22.Degrees = 45f;
-        temp22.Duration = 0.5;
-        temp22.Easing = Fuse.Animations.Easing.CubicInOut;
-        temp23.Factor = 2f;
-        temp23.Duration = 0.5;
-        temp23.Easing = Fuse.Animations.Easing.CubicInOut;
-        temp24.Value = float4(0.9882353f, 0.3176471f, 0.5215687f, 1f);
-        temp24.Duration = 0.3;
-        temp25.Value = float4(15f, 15f, 15f, 15f);
-        temp25.Duration = 0.3;
-        temp26.Title = "Logic with JavaScript";
-        temp26.Color = float4(1f, 1f, 1f, 1f);
-        temp26.HeaderColor = float4(0.9647059f, 0.5607843f, 0.8431373f, 1f);
-        temp26.HeaderTextColor = float4(1f, 1f, 1f, 1f);
-        temp26.Instructions = "Tap the screen to add items";
+        temp17.Children.Add(temp19);
+        temp17.Children.Add(temp20);
+        temp17.Children.Add(temp22);
+        temp17.Children.Add(temp26);
+        temp18.LineNumber = 5;
+        temp18.FileName = "MainView.ux";
+        temp18.File = new global::Uno.UX.BundleFileSource(import global::Uno.IO.BundleFile("../../../MainView.js"));
+        global::Fuse.Controls.DockPanel.SetDock(temp19, Fuse.Layouts.Dock.Top);
+        temp20.Width = new Uno.UX.Size(100f, Uno.UX.Unit.Percent);
+        temp20.Height = new Uno.UX.Size(10f, Uno.UX.Unit.Percent);
+        temp20.Alignment = Fuse.Elements.Alignment.TopCenter;
+        temp20.Fill = Fuse.Drawing.Brushes.White;
+        temp20.Children.Add(temp21);
+        temp21.Value = "∞";
+        temp21.FontSize = 60f;
+        temp21.TextColor = float4(0.2039216f, 0.5960785f, 0.8588235f, 1f);
+        temp21.Alignment = Fuse.Elements.Alignment.Center;
+        temp22.Width = new Uno.UX.Size(100f, Uno.UX.Unit.Percent);
+        temp22.MaxHeight = new Uno.UX.Size(80f, Uno.UX.Unit.Percent);
+        temp22.Alignment = Fuse.Elements.Alignment.HorizontalCenter;
+        temp22.Children.Add(temp23);
+        temp22.Children.Add(temp24);
+        temp22.Children.Add(temp25);
+        temp23.Value = "∞";
+        temp23.FontSize = 60f;
+        temp23.TextAlignment = Fuse.Controls.TextAlignment.Center;
+        temp23.TextColor = Fuse.Drawing.Colors.White;
+        temp24.Value = "Deliveries re-imagined. Move the world with Moover";
+        temp24.FontSize = 20f;
+        temp24.TextAlignment = Fuse.Controls.TextAlignment.Center;
+        temp24.TextColor = Fuse.Drawing.Colors.White;
+        temp25.StretchMode = Fuse.Elements.StretchMode.UniformToFill;
+        temp25.Source = global::MainView.byjente;
+        temp26.Background = Fuse.Drawing.Brushes.Transparent;
         temp26.Children.Add(temp27);
-        temp26.Children.Add(temp28);
-        temp27.Code = "var Observable = require('FuseJS/Observable');\n\t\t\t\t\titems = Observable();\n\t\t\t\t\tfunction addItem(){\n\t\t\t\t\t\titems.add({\n\t\t\t\t\t\t\tcolor : [Math.random(), Math.random(), Math.random(), 1],\n\t\t\t\t\t\t\theight : (Math.random() + 1.0) * 80\n\t\t\t\t\t\t});\n\t\t\t\t\t}\n\t\t\t\t\tmodule.exports = {\n\t\t\t\t\t\titems : items,\n\t\t\t\t\t\taddItem : addItem\n\t\t\t\t\t};";
-        temp27.LineNumber = 37;
-        temp27.FileName = "MainView.ux";
-        global::Fuse.Gestures.Tapped.AddHandler(temp28, temp_eb0.OnEvent);
-        temp28.Children.Add(temp29);
-        temp28.Bindings.Add(temp_eb0);
-        temp29.Children.Add(temp30);
-        temp30.Layout = temp31;
-        temp30.Children.Add(temp);
-        temp31.ColumnCount = 3;
-        temp.Templates.Add(item);
-        temp.Bindings.Add(temp32);
-        temp33.Title = "Realtime effects";
-        temp33.Color = float4(1f, 1f, 1f, 1f);
-        temp33.HeaderColor = float4(0.172549f, 0.682353f, 0.2470588f, 1f);
-        temp33.HeaderTextColor = float4(1f, 1f, 1f, 1f);
-        temp33.Instructions = "Use the slider to blur the logo";
-        temp33.Children.Add(temp34);
-        temp34.RowCount = 2;
-        temp34.Children.Add(temp35);
-        temp34.Children.Add(temp36);
-        temp35.Color = float4(0f, 0f, 0f, 1f);
-        temp35.File = new global::Uno.UX.BundleFileSource(import global::Uno.IO.BundleFile("../../../Assets/FuseLogo.png"));
-        temp35.Children.Add(myBlur);
-        myBlur.Radius = 0f;
-        myBlur.Name = __selector5;
-        temp36.Alignment = Fuse.Elements.Alignment.VerticalCenter;
-        temp36.Margin = float4(40f, 0f, 40f, 0f);
-        temp36.Children.Add(temp37);
-        temp37.Animators.Add(temp38);
-        temp38.Value = 10f;
+        temp26.Children.Add(temp31);
+        temp27.Color = Fuse.Drawing.Colors.Black;
+        temp27.Width = new Uno.UX.Size(50f, Uno.UX.Unit.Percent);
+        temp27.Height = new Uno.UX.Size(10f, Uno.UX.Unit.Percent);
+        temp27.Alignment = Fuse.Elements.Alignment.BottomLeft;
+        temp27.Children.Add(temp28);
+        temp27.Children.Add(temp29);
+        temp28.Value = "LOG IN";
+        temp28.TextColor = Fuse.Drawing.Colors.White;
+        temp28.Alignment = Fuse.Elements.Alignment.Center;
+        temp29.Animators.Add(temp30);
+        temp30.Factor = 0.9f;
+        temp30.Easing = Fuse.Animations.Easing.BounceIn;
+        temp30.EasingBack = Fuse.Animations.Easing.BounceOut;
+        temp31.Color = float4(0.1803922f, 0.8f, 0.4431373f, 1f);
+        temp31.Width = new Uno.UX.Size(50f, Uno.UX.Unit.Percent);
+        temp31.Height = new Uno.UX.Size(10f, Uno.UX.Unit.Percent);
+        temp31.Alignment = Fuse.Elements.Alignment.BottomRight;
+        temp31.Children.Add(temp32);
+        temp31.Children.Add(temp33);
+        temp32.Value = "SIGN UP";
+        temp32.TextColor = Fuse.Drawing.Colors.White;
+        temp32.Alignment = Fuse.Elements.Alignment.Center;
+        temp33.Animators.Add(temp34);
+        temp34.Factor = 0.9f;
+        temp34.EasingBack = Fuse.Animations.Easing.BounceOut;
         __g_nametable.This = this;
-        __g_nametable.Objects.Add(myRectangle);
-        __g_nametable.Objects.Add(myBlur);
+        this.Children.Add(temp16);
         this.Children.Add(temp17);
     }
-    static global::Uno.UX.Selector __selector0 = "Color";
-    static global::Uno.UX.Selector __selector1 = "CornerRadius";
-    static global::Uno.UX.Selector __selector2 = "Items";
-    static global::Uno.UX.Selector __selector3 = "Radius";
-    static global::Uno.UX.Selector __selector4 = "myRectangle";
-    static global::Uno.UX.Selector __selector5 = "myBlur";
 }

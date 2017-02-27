@@ -1,6 +1,7 @@
 [Uno.Compiler.UxGenerated]
 public partial class MainView: Fuse.App
 {
+    [global::Uno.UX.UXGlobalResource("byjente")] public static readonly Fuse.Resources.FileImageSource byjente;
     global::Uno.UX.NameTable __g_nametable;
     static string[] __g_static_nametable = new string[] {
     };
@@ -102,6 +103,10 @@ public partial class MainView: Fuse.App
         global::Uno.UX.Resource.SetGlobalKey(Fuse.TranslationModes.ParentSize, "ParentSize");
         global::Uno.UX.Resource.SetGlobalKey(Fuse.TranslationModes.Width, "Width");
         global::Uno.UX.Resource.SetGlobalKey(Fuse.TranslationModes.Height, "Height");
+        global::Uno.UX.Resource.SetGlobalKey(MainView.byjente, "byjente");
+        byjente = new Fuse.Resources.FileImageSource();
+        global::Uno.UX.Resource.SetGlobalKey(byjente, "byjente");
+        byjente.File = new global::Uno.UX.BundleFileSource(import global::Uno.IO.BundleFile("../../../../../Assets/back.jpeg"));
     }
     [global::Uno.UX.UXConstructor]
     public MainView()
@@ -127,16 +132,16 @@ public partial class MainView: Fuse.App
         var temp14 = new FuseJS.FileReaderImpl();
         var temp15 = new FuseJS.UserEvents();
         __g_nametable = new global::Uno.UX.NameTable(null, __g_static_nametable);
-        var temp16 = new Fuse.Reactive.JavaScript(__g_nametable);
-        var temp17 = new Fuse.iOS.StatusBarConfig();
-        var temp18 = new Fuse.Controls.DockPanel();
+        var temp16 = new Fuse.iOS.StatusBarConfig();
+        var temp17 = new Fuse.Controls.DockPanel();
+        var temp18 = new Fuse.Reactive.JavaScript(__g_nametable);
         var temp19 = new Fuse.Controls.StatusBarBackground();
         var temp20 = new Fuse.Controls.Rectangle();
         var temp21 = new Fuse.Controls.Text();
         var temp22 = new Fuse.Controls.Rectangle();
         var temp23 = new Fuse.Controls.Text();
         var temp24 = new Fuse.Controls.Text();
-        var temp25 = new Fuse.Drawing.ImageFill();
+        var temp25 = new Fuse.Controls.Image();
         var temp26 = new Fuse.Controls.Rectangle();
         var temp27 = new Fuse.Controls.Button();
         var temp28 = new Fuse.Controls.Text();
@@ -146,14 +151,16 @@ public partial class MainView: Fuse.App
         var temp32 = new Fuse.Controls.Text();
         var temp33 = new Fuse.Gestures.WhilePressed();
         var temp34 = new Fuse.Animations.Scale();
-        temp16.LineNumber = 2;
-        temp16.FileName = "MainView.ux";
-        temp17.IsVisible = true;
-        temp17.Style = Fuse.Platform.StatusBarStyle.Light;
-        temp18.Children.Add(temp19);
-        temp18.Children.Add(temp20);
-        temp18.Children.Add(temp22);
-        temp18.Children.Add(temp26);
+        temp16.IsVisible = true;
+        temp16.Style = Fuse.Platform.StatusBarStyle.Light;
+        temp17.Children.Add(temp18);
+        temp17.Children.Add(temp19);
+        temp17.Children.Add(temp20);
+        temp17.Children.Add(temp22);
+        temp17.Children.Add(temp26);
+        temp18.LineNumber = 5;
+        temp18.FileName = "MainView.ux";
+        temp18.File = new global::Uno.UX.BundleFileSource(import global::Uno.IO.BundleFile("../../../../../MainView.js"));
         global::Fuse.Controls.DockPanel.SetDock(temp19, Fuse.Layouts.Dock.Top);
         temp20.Width = new Uno.UX.Size(100f, Uno.UX.Unit.Percent);
         temp20.Height = new Uno.UX.Size(10f, Uno.UX.Unit.Percent);
@@ -161,15 +168,15 @@ public partial class MainView: Fuse.App
         temp20.Fill = Fuse.Drawing.Brushes.White;
         temp20.Children.Add(temp21);
         temp21.Value = "∞";
-        temp21.FontSize = 40f;
+        temp21.FontSize = 60f;
         temp21.TextColor = float4(0.2039216f, 0.5960785f, 0.8588235f, 1f);
         temp21.Alignment = Fuse.Elements.Alignment.Center;
         temp22.Width = new Uno.UX.Size(100f, Uno.UX.Unit.Percent);
         temp22.MaxHeight = new Uno.UX.Size(80f, Uno.UX.Unit.Percent);
         temp22.Alignment = Fuse.Elements.Alignment.HorizontalCenter;
-        temp22.Fills.Add(temp25);
         temp22.Children.Add(temp23);
         temp22.Children.Add(temp24);
+        temp22.Children.Add(temp25);
         temp23.Value = "∞";
         temp23.FontSize = 60f;
         temp23.TextAlignment = Fuse.Controls.TextAlignment.Center;
@@ -179,7 +186,7 @@ public partial class MainView: Fuse.App
         temp24.TextAlignment = Fuse.Controls.TextAlignment.Center;
         temp24.TextColor = Fuse.Drawing.Colors.White;
         temp25.StretchMode = Fuse.Elements.StretchMode.UniformToFill;
-        temp25.File = new global::Uno.UX.BundleFileSource(import global::Uno.IO.BundleFile("../../../../../Assets/byjente.jpeg"));
+        temp25.Source = global::MainView.byjente;
         temp26.Background = Fuse.Drawing.Brushes.Transparent;
         temp26.Children.Add(temp27);
         temp26.Children.Add(temp31);
@@ -200,6 +207,7 @@ public partial class MainView: Fuse.App
         temp31.Width = new Uno.UX.Size(50f, Uno.UX.Unit.Percent);
         temp31.Height = new Uno.UX.Size(10f, Uno.UX.Unit.Percent);
         temp31.Alignment = Fuse.Elements.Alignment.BottomRight;
+        global::Fuse.Gestures.Clicked.AddHandler(temp31, clicked);
         temp31.Children.Add(temp32);
         temp31.Children.Add(temp33);
         temp32.Value = "SIGN UP";
@@ -211,6 +219,5 @@ public partial class MainView: Fuse.App
         __g_nametable.This = this;
         this.Children.Add(temp16);
         this.Children.Add(temp17);
-        this.Children.Add(temp18);
     }
 }

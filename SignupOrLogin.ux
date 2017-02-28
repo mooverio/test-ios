@@ -1,0 +1,49 @@
+<Page ux:Class="SignupOrLogin">
+	<Router ux:Dependency="router" />
+	<JavaScript File="SignupOrLogin.js" />
+
+	<iOS.StatusBarConfig Style="Light" IsVisible="True" />
+	<DockPanel>
+		<StatusBarBackground Dock="Top" />
+		<Font File="./Assets/fonts/Roboto-Medium.ttf" ux:Global="Medium" />
+   		<Font File="./Assets/fonts/Roboto-Light.ttf" ux:Global="Light" />
+   		<Font File="./Assets/fonts/Roboto-Thin.ttf" ux:Global="Thin" />
+
+   			    <Text ux:Class="Light" Font="Light" TextWrapping="Wrap" FontSize="20" Color="White" TextAlignment="Center"/>
+   			    <Text ux:Class="Thin" Font="Thin" TextWrapping="Wrap" FontSize="20" TextAlignment="Center" Color="White" />
+			    <Text ux:Class="Medium" Font="Medium" TextWrapping="Wrap" TextAlignment="Center" FontSize="25" Color="White" />
+
+
+			<FileImageSource File="./Assets/back.jpeg" ux:Global="byjente" />
+
+
+
+			<Rectangle Width="100%" Height="90%" Alignment="Top">
+				<Rectangle Alignment="VerticalCenter">
+				<Light TextAlignment="Center">Deliveries re-imagined. Move the world with Moover</Light>
+				</Rectangle>
+				<Image Source="byjente" StretchMode="UniformToFill"/>
+			</Rectangle>
+	
+
+			<Rectangle Background="Transparent">
+				<Button Clicked="{loginClicked}" Color="Black" Width="50%" Height="10%" Alignment="BottomLeft" >
+					<Medium Alignment="Center">LOG IN</Medium>
+					<WhilePressed>
+						<Scale Factor=".9" Easing="BounceIn" EasingBack="BounceOut"/>
+					</WhilePressed>
+				</Button>
+
+				<Button Color="#2ECC71" Width="50%" Height="10%" Alignment="BottomRight">
+					<Medium Alignment="Center" TextColor="White">SIGN UP</Medium>
+					<WhilePressed>
+						<Scale Factor=".9" EasingBack="BounceOut"/>
+					</WhilePressed>
+				</Button>
+			</Rectangle>
+
+
+
+	</DockPanel>
+</Page>
+

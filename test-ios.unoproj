@@ -5,6 +5,8 @@
     "FuseJS"
   ],
   "Includes": [
-    "*"
+    "**.ux:UXFile",
+    "*.js:Bundle",
+    "assets/*:Bundle"
   ]
 }

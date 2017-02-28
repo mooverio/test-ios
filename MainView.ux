@@ -1,44 +1,9 @@
 <App>
 
-	<iOS.StatusBarConfig Style="Light" IsVisible="True" />
-	<DockPanel>
-		<JavaScript File="MainView.js" />
-		<StatusBarBackground Dock="Top" />
-
-			<FileImageSource File="./Assets/back.jpeg" ux:Global="byjente" />
-
-
-			<Rectangle Fill="White" Width="100%" Height="10%" Alignment="TopCenter">
-				<Text Alignment="Center" FontSize="60" TextColor="#3498DB">∞</Text>
-			</Rectangle>
-
-
-			<Rectangle Width="100%" MaxHeight="80%" Alignment="HorizontalCenter">
-				<Text TextAlignment="Center" TextColor="White" FontSize="60">∞</Text>
-				<Text TextAlignment="Center" TextColor="White" FontSize="20">Deliveries re-imagined. Move the world with Moover</Text>
-					<Image Source="byjente" StretchMode="UniformToFill"/>
-			</Rectangle>
-	
-
-			<Rectangle Background="Transparent">
-				<Button Color="Black" Width="50%" Height="10%" Alignment="BottomLeft">
-					<Text Alignment="Center" TextColor="White">LOG IN</Text>
-					<WhilePressed>
-						<Scale Factor=".9" Easing="BounceIn" EasingBack="BounceOut"/>
-					</WhilePressed>
-				</Button>
-
-
-				<Button Clicked="clicked" Color="#2ECC71" Width="50%" Height="10%" Alignment="BottomRight">
-					<Text Alignment="Center" TextColor="White">SIGN UP</Text>
-					<WhilePressed>
-						<Scale Factor=".9" EasingBack="BounceOut"/>
-					</WhilePressed>
-				</Button>
-			</Rectangle>
-
-
-
-	</DockPanel>
+	<Router ux:Name="router"/>
+	<Navigator DefaultPath="signuporlogin">
+			<SignupOrLogin ux:Template="signuporlogin" router="router" />
+			<LoginPage ux:Template="loginpage" router="router" />
+	</Navigator>
 </App>
 
